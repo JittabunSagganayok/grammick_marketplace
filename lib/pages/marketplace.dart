@@ -185,214 +185,244 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
+                MainContent(fem: fem, ffem: ffem, h1: h1),
+                /*********/
+                SizedBox(
+                  height: 7,
+                ),
                 Container(
                   decoration: BoxDecoration(
                     shape: BoxShape.rectangle,
-                    color: Colors.white,
-                    borderRadius: BorderRadius.only(
-                      topLeft: Radius.circular(25.0),
-                      topRight: Radius.circular(25.0),
-                    ),
+                    color: Colors.red,
                   ),
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20.0, 16, 20, 0),
-                    child: Column(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+                  ),
+                ),
+              ],
+            )
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class MainContent extends StatelessWidget {
+  const MainContent({
+    super.key,
+    required this.fem,
+    required this.ffem,
+    required this.h1,
+  });
+
+  final double fem;
+  final double ffem;
+  final double h1;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+        shape: BoxShape.rectangle,
+        color: Colors.white,
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(25.0),
+          topRight: Radius.circular(25.0),
+        ),
+      ),
+      child: Padding(
+        padding: const EdgeInsets.fromLTRB(20.0, 16, 20, 0),
+        child: Column(
+          children: [
+            Row(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+                Container(
+                  width: 67,
+                  child: Container(
+                    width: double.infinity,
+                    child: Container(
+                      // group34222MH8 (1:241)
+                      width: double.infinity,
+                      height: 27 * fem,
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10 * fem),
+                      ),
+                      child: Container(
+                        // group34221HwU (1:242)
+                        width: double.infinity,
+                        height: double.infinity,
+                        decoration: BoxDecoration(
+                          color: Color(0xffceffcd),
+                          borderRadius: BorderRadius.circular(10 * fem),
+                        ),
+                        child: Center(
+                          child: Text(
+                            'For you',
+                            style: SafeGoogleFont(
+                              'Kanit',
+                              fontSize: 11 * ffem,
+                              fontWeight: FontWeight.w400,
+                              height: 1.495 * ffem / fem,
+                              letterSpacing: -0.22 * fem,
+                              color: Color(0xff179b57),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+                Expanded(
+                  child: SizedBox(),
+                ),
+                Container(
+                  width: 86,
+                  child: Container(
+                    // group342209sC (1:245)
+                    padding: EdgeInsets.fromLTRB(14, 5, 12, 5),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff8f8f8),
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            Container(
-                              width: 67,
-                              child: Container(
-                                width: double.infinity,
-                                child: Container(
-                                  // group34222MH8 (1:241)
-                                  width: double.infinity,
-                                  height: 27 * fem,
-                                  decoration: BoxDecoration(
-                                    borderRadius:
-                                        BorderRadius.circular(10 * fem),
-                                  ),
-                                  child: Container(
-                                    // group34221HwU (1:242)
-                                    width: double.infinity,
-                                    height: double.infinity,
-                                    decoration: BoxDecoration(
-                                      color: Color(0xffceffcd),
-                                      borderRadius:
-                                          BorderRadius.circular(10 * fem),
-                                    ),
-                                    child: Center(
-                                      child: Text(
-                                        'For you',
-                                        style: SafeGoogleFont(
-                                          'Kanit',
-                                          fontSize: 11 * ffem,
-                                          fontWeight: FontWeight.w400,
-                                          height: 1.495 * ffem / fem,
-                                          letterSpacing: -0.22 * fem,
-                                          color: Color(0xff179b57),
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ),
+                        Container(
+                          // categoryGB8 (1:248)
+                          margin: EdgeInsets.fromLTRB(0, 0, 6, 0),
+                          child: Text(
+                            'Category',
+                            style: SafeGoogleFont(
+                              'Kanit',
+                              fontSize: 11,
+                              fontWeight: FontWeight.w400,
+                              height: 1.495,
+                              letterSpacing: -0.22,
+                              color: Color(0xff179b57),
                             ),
-                            SizedBox(
-                              width: 50,
-                            ),
-                            Container(
-                              width: 86,
-                              child: Container(
-                                // group342209sC (1:245)
-                                padding: EdgeInsets.fromLTRB(14, 5, 12, 5),
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  color: Color(0xfff8f8f8),
-                                  borderRadius: BorderRadius.circular(10),
-                                ),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      // categoryGB8 (1:248)
-                                      margin: EdgeInsets.fromLTRB(0, 0, 6, 0),
-                                      child: Text(
-                                        'Category',
-                                        style: SafeGoogleFont(
-                                          'Kanit',
-                                          fontSize: 11,
-                                          fontWeight: FontWeight.w400,
-                                          height: 1.495,
-                                          letterSpacing: -0.22,
-                                          color: Color(0xff179b57),
-                                        ),
-                                      ),
-                                    ),
-                                    Container(
-                                      // icarrowright24xZk (1:247)
-                                      margin: EdgeInsets.fromLTRB(0, 1, 0, 0),
-                                      width: 10,
-                                      height: 10,
-                                      child: Image.asset(
-                                        'assets/page-1/images/ic-arrow-right-24.png',
-                                        width: 10,
-                                        height: 10,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                            SizedBox(
-                              width: 10,
-                            ),
-                            Container(
-                              width: 116,
-                              child: Container(
-                                // group34223aWa (1:249)
-                                padding: EdgeInsets.fromLTRB(
-                                    0 * fem, 5 * fem, 0 * fem, 5 * fem),
-                                width: double.infinity,
-                                decoration: BoxDecoration(
-                                  color: Color(0xfff8f8f8),
-                                  borderRadius: BorderRadius.circular(10 * fem),
-                                ),
-                                child: Row(
-                                  crossAxisAlignment: CrossAxisAlignment.center,
-                                  children: [
-                                    Container(
-                                      // iconVNe (1:251)
-                                      margin: EdgeInsets.fromLTRB(0 * fem,
-                                          0 * fem, 4.52 * fem, 0 * fem),
-                                      width: 10.48 * fem,
-                                      height: 13 * fem,
-                                      child: Image.asset(
-                                        'assets/page-1/images/icon.png',
-                                        width: 10.48 * fem,
-                                        height: 13 * fem,
-                                      ),
-                                    ),
-                                    Container(
-                                      // bangkokQVc (1:258)
-                                      margin: EdgeInsets.fromLTRB(
-                                          0 * fem, 0 * fem, 0 * fem, 0 * fem),
-                                      child: Text(
-                                        'Bangkok',
-                                        style: SafeGoogleFont(
-                                          'Kanit',
-                                          fontSize: 11 * ffem,
-                                          fontWeight: FontWeight.w400,
-                                          height: 1.495 * ffem / fem,
-                                          letterSpacing: -0.22 * fem,
-                                          color: Color(0xff737373),
-                                        ),
-                                      ),
-                                    ),
-                                    Text(
-                                      // km798 (1:259)
-                                      ' (30km.)',
-                                      style: SafeGoogleFont(
-                                        'Kanit',
-                                        fontSize: 11 * ffem,
-                                        fontWeight: FontWeight.w400,
-                                        height: 1.495 * ffem / fem,
-                                        letterSpacing: -0.22 * fem,
-                                        color: Color(0xff3d79d2),
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 20,
-                        ),
-                        fivemenu(),
-                        SizedBox(
-                          height: 28,
-                        ),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'Recommend',
-                              style: SafeGoogleFont(
-                                'Kanit',
-                                fontSize: 15 * ffem,
-                                fontWeight: FontWeight.w500,
-                                height: 1.495 * ffem / fem,
-                                color: Color(0xff000000),
-                              ),
-                            ),
-                            Text(
-                              'View more',
-                              style: SafeGoogleFont(
-                                'Kanit',
-                                fontSize: 12 * ffem,
-                                fontWeight: FontWeight.w400,
-                                height: 1.495 * ffem / fem,
-                                color: Color(0xff3d79d2),
-                              ),
-                            ),
-                          ],
-                        ),
-                        SizedBox(
-                          height: 15,
+                          ),
                         ),
                         Container(
-                          height: h1,
-                          child: imagecardgen(imageData: imagescardList),
+                          // icarrowright24xZk (1:247)
+                          margin: EdgeInsets.fromLTRB(0, 1, 0, 0),
+                          width: 10,
+                          height: 10,
+                          child: Image.asset(
+                            'assets/page-1/images/ic-arrow-right-24.png',
+                            width: 10,
+                            height: 10,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  width: 10,
+                ),
+                Container(
+                  width: 116,
+                  child: Container(
+                    // group34223aWa (1:249)
+                    padding:
+                        EdgeInsets.fromLTRB(0 * fem, 5 * fem, 0 * fem, 5 * fem),
+                    width: double.infinity,
+                    decoration: BoxDecoration(
+                      color: Color(0xfff8f8f8),
+                      borderRadius: BorderRadius.circular(10 * fem),
+                    ),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Container(
+                          // iconVNe (1:251)
+
+                          width: 10.48 * fem,
+                          height: 13 * fem,
+                          child: Image.asset(
+                            'assets/page-1/images/icon.png',
+                            width: 10.48 * fem,
+                            height: 13 * fem,
+                          ),
+                        ),
+                        Container(
+                          // bangkokQVc (1:258)
+
+                          child: Text(
+                            'Bangkok',
+                            style: SafeGoogleFont(
+                              'Kanit',
+                              fontSize: 11 * ffem,
+                              fontWeight: FontWeight.w400,
+                              height: 1.495 * ffem / fem,
+                              letterSpacing: -0.22 * fem,
+                              color: Color(0xff737373),
+                            ),
+                          ),
+                        ),
+                        Text(
+                          // km798 (1:259)
+                          ' (30km.)',
+                          style: SafeGoogleFont(
+                            'Kanit',
+                            fontSize: 11 * ffem,
+                            fontWeight: FontWeight.w400,
+                            height: 1.495 * ffem / fem,
+                            letterSpacing: -0.22 * fem,
+                            color: Color(0xff3d79d2),
+                          ),
                         ),
                       ],
                     ),
                   ),
                 ),
               ],
-            )
+            ),
+            SizedBox(
+              height: 20,
+            ),
+            fivemenu(),
+            SizedBox(
+              height: 28,
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Text(
+                  'Recommend',
+                  style: SafeGoogleFont(
+                    'Kanit',
+                    fontSize: 15 * ffem,
+                    fontWeight: FontWeight.w500,
+                    height: 1.495 * ffem / fem,
+                    color: Color(0xff000000),
+                  ),
+                ),
+                Text(
+                  'View more',
+                  style: SafeGoogleFont(
+                    'Kanit',
+                    fontSize: 12 * ffem,
+                    fontWeight: FontWeight.w400,
+                    height: 1.495 * ffem / fem,
+                    color: Color(0xff3d79d2),
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 15,
+            ),
+            Container(
+              height: h1,
+              child: imagecardgen(imageData: imagescardList),
+            ),
           ],
         ),
       ),
@@ -441,7 +471,7 @@ class imagecardgen extends StatelessWidget {
                   height: 15,
                 ),
                 Text(
-                  'Awesome Custom RED...',
+                  imageData[index]['title'],
                   style: SafeGoogleFont(
                     'Kanit',
                     fontSize: 13,
@@ -449,12 +479,13 @@ class imagecardgen extends StatelessWidget {
                     height: 1.495,
                     color: Color(0xff000000),
                   ),
+                  overflow: TextOverflow.ellipsis,
                 ),
                 SizedBox(
                   height: 3,
                 ),
                 Text(
-                  '68,000 ฿',
+                  imageData[index]['price'],
                   style: SafeGoogleFont(
                     'Kanit',
                     fontSize: 13,
